@@ -1,0 +1,30 @@
+// Complete the insertNodeAtTail function below.
+
+    /*
+     * For your reference:
+     *
+     * SinglyLinkedListNode {
+     *     int data;
+     *     SinglyLinkedListNode next;
+     * }
+     *
+     */
+    static SinglyLinkedListNode insertNodeAtTail(SinglyLinkedListNode head, int data) {
+        SinglyLinkedListNode newNode = new SinglyLinkedListNode(data);
+        SinglyLinkedListNode curr = head;
+        // newNode.data = data;
+        // newNode.next = null;
+        if(head == null){
+            head = newNode;
+            return head;
+        }
+        else{
+            while(head.next != null){
+                head = head.next;
+            }
+            head.next = newNode;
+            return curr;
+        }
+        
+    
+        }
