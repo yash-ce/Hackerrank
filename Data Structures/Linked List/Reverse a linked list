@@ -1,0 +1,16 @@
+https://www.hackerrank.com/challenges/reverse-a-linked-list/problem
+
+  public static SinglyLinkedListNode reverse(SinglyLinkedListNode llist) {
+    // Write your code here
+    SinglyLinkedListNode next_ = null;
+    SinglyLinkedListNode pre = null;
+    SinglyLinkedListNode head = llist;
+    while(head != null){
+        next_= head.next;
+        head.next = pre;
+        pre = head;
+        head = next_; 
+    }
+    return pre;
+
+    }
