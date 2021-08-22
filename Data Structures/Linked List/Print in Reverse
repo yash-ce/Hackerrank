@@ -1,0 +1,28 @@
+https://www.hackerrank.com/challenges/print-the-elements-of-a-linked-list-in-reverse/problem
+
+/*
+ * Complete the 'reversePrint' function below.
+ *
+ * The function accepts INTEGER_SINGLY_LINKED_LIST llist as parameter.
+ */
+
+/*
+ * For your reference:
+ *
+ * SinglyLinkedListNode {
+ *     int data;
+ *     SinglyLinkedListNode* next;
+ * };
+ *
+ */
+
+void reversePrint(SinglyLinkedListNode* llist) {
+    if(llist == NULL){
+        return;
+    }
+    // call to recursive function
+    reversePrint(llist->next);
+    // print the element in from the end
+    cout<<llist->data<<endl;
+
+}
