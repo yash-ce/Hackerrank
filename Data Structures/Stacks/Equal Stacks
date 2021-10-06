@@ -1,0 +1,73 @@
+//  https://www.hackerrank.com/challenges/equal-stacks/problem
+
+def equalStacks(h1, h2, h3):
+    # Write your code here
+   
+    l1 = h1
+    l2 = h2
+    l3 = h3
+    print(h1)
+    print(h2)
+    print(h3)
+    h1.reverse()
+    h2.reverse()
+    h3.reverse()
+    a = []
+    c = 0
+    print(h1)
+    print(h2)
+    print(h3)
+    for i in h1:
+        c += i
+        # print(i)
+        a.append(c)
+    c = 0
+    b = []
+    for i in h2:
+        c += i
+        b.append(c)
+    
+    c1 = []
+    c = 0
+    for i in h3:
+        # print(type(i))
+        c += i
+        # print(type(c))
+        c1.append(c)
+    # print(a)
+    # print(b)
+    # print(c1)
+    a.reverse()
+    b.reverse()
+    # print("c1",c1)
+    
+    c1.reverse()
+    # print(a)
+    # print(b)
+    # print(c1)
+    
+    a1 = len(a)
+    a2 = len(b)
+    a3 = len(c1)
+    l11 = []
+    l11.append(a1)
+    l11.append(a2)
+    l11.append(a3) 
+    m = min(l11)
+    if m == a1:
+        r = a
+    elif m == a2:
+        r = b
+    else:
+        r = c1
+    
+        
+        
+    # print(a)
+    # print(b)
+    # print(c1)
+    for i in r:
+        # print(a[i],b[i],c[i])
+        if i in a and i in b and i in c1:
+            break
+    return i
