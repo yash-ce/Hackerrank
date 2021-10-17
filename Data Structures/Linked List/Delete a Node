@@ -42,3 +42,33 @@ SinglyLinkedListNode* deleteNode(SinglyLinkedListNode* llist, int position) {
         return llist;
     }
 }
+
+
+// Another solution
+
+public static SinglyLinkedListNode deleteNode(SinglyLinkedListNode llist, int position) {
+    // Write your code here
+    if(position == 0 && llist.next == null){
+        return null;
+    }
+    else if(position == 0 && llist.next != null){
+        return llist.next;
+    }
+    
+    else{
+        int c = 1;
+        SinglyLinkedListNode curr = llist;
+        SinglyLinkedListNode pre = null;
+        
+        while(c < position && curr != null){
+            c++;
+            curr = curr.next;
+        }
+        
+        curr.next  = curr.next.next;
+        return llist;
+        
+    }
+
+}
+
