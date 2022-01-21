@@ -1,0 +1,8 @@
+def divisibleSumPairs(n, k, ar):
+    cou = 0
+    for i in range(len(ar)):
+        for j in range(i, len(ar)):
+            if(ar[i]+ar[j])%k == 0 and i < j:
+                cou += 1;
+    
+    return cou
