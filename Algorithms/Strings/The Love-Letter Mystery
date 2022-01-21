@@ -1,0 +1,8 @@
+def theLoveLetterMystery(s):
+    # Write your code here
+    su = 0
+    n = len(s)-1
+    for i in range(len(s)//2):
+        su += abs(ord(s[i]) - ord(s[n]))
+        n -= 1
+    return su
