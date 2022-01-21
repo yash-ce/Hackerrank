@@ -1,0 +1,4 @@
+def countingSort(arr):
+    # Write your code here
+    arr.sort()
+    return arr
