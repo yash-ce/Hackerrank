@@ -1,0 +1,6 @@
+def countingSort(arr):
+    # Write your code here
+    l = []
+    for i in range(100):
+        l.append(arr.count(i))
+    return l
