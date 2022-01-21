@@ -1,0 +1,10 @@
+def viralAdvertising(n):
+    # Write your code here
+    Cumulative = 0
+    Shared = 5
+    for i in range(1,n+1):
+        Liked = Shared//2
+        Cumulative += Liked
+        Shared = Liked*3
+    return Cumulative
+        
