@@ -1,0 +1,11 @@
+int howManyGames(int p, int d, int m, int s) {
+    // Return the number of games you can buy
+    int count = 0;
+        while(s>=p){
+            count++;
+            s -=p;
+            p = max(p-d,m);
+        }
+        return count;
+
+}
