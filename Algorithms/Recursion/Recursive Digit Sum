@@ -1,0 +1,24 @@
+#
+# Complete the 'superDigit' function below.
+#
+# The function is expected to return an INTEGER.
+# The function accepts following parameters:
+#  1. STRING n
+#  2. INTEGER k
+#
+
+def cal(n):
+    if(len(str(n)) == 1):
+        return n
+    s = 0
+    for i in str(n):
+        s += int(i)
+    return cal(s)
+
+def superDigit(n, k):
+    # Write your code here
+    s = 0
+    for i in n:
+        s += int(i)
+    res = cal(s*k)
+    return res
