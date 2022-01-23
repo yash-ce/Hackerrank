@@ -1,10 +1,19 @@
-string ltrim(const string &str) {
-    string s(str);
-
-    s.erase(
-        s.begin(),
-        find_if(s.begin(), s.end(), not1(ptr_fun<int, int>(isspace)))
-    );
-
-    return s;
+int countingValleys(int steps, string path) {
+    int le = 0;
+    int res = 0;
+    for(int i=0;i<steps;i++){
+        if(path[i] == 'U'){
+            le++;
+        }
+        if(path[i] == 'D'){
+            le--;
+        }
+        if(le == 0 && path[i] == 'U'){
+            res++;
+        }
+        
+    }
+    
+    return res;
 }
+
